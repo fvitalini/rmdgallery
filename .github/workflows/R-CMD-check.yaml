@@ -41,7 +41,7 @@ jobs:
         run: |
           sudo apt-get update && sudo apt-get install -y --no-install-recommends \
             libcurl4-openssl-dev
-          RScript -e 'remotes::install_dev("pkgdown")'
+          Rscript -e 'remotes::install_dev("pkgdown")'
       - name: Deploy pkgdown website
         if: github.ref == 'refs/heads/feature/pkgdown'
         run: |
